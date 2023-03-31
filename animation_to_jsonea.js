@@ -7,7 +7,7 @@
         author: "Gaming32",
         description: "Converts Blockbench animations to the json format for the Json Entity Animation mod",
         icon: "fa-cube",
-        tags: ["Animation", "Minecraft: Java Edition", "Json Entity Animation"],
+        tags: ["Animation", "Minecraft: Java Edition"],
         variant: "both",
         version: "1.0.0",
         onload() {
@@ -17,7 +17,7 @@
                 description: "Export Animations to Json Entity Animation format",
                 icon: "fa-file-export",
                 condition: () => Format.animation_mode,
-                click: () => Blockbench.textPrompt("JsonEA", "What entity type are you animating?", (entity) => {
+                click: () => Blockbench.textPrompt("What entity type are you animating?", "pig", (entity) => {
                     const animation = Animation.selected;
                     if (animation == null) return;
                     Blockbench.export({
