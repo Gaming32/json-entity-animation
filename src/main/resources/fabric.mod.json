@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "json-entity-animation",
+  "version": "${version}",
+  "name": "json-entity-animation",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/Gaming32/json-entity-animation"
+  },
+  "license": "MIT",
+  "icon": "assets/json-entity-animation/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "io.github.gaming32.jsonentityanimation.client.JsonEntityAnimationClient"
+    ],
+    "main": [
+      "io.github.gaming32.jsonentityanimation.JsonEntityAnimation"
+    ]
+  },
+  "mixins": [
+    "json-entity-animations.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.19.2",
+    "fabric-resource-loader-v0": "*"
+  }
+}
