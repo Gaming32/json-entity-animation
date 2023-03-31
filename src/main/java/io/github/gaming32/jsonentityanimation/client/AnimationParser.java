@@ -38,7 +38,7 @@ public class AnimationParser {
         final AnimationDefinition.Builder builder = AnimationDefinition.Builder.withLength(
             GsonHelper.getAsFloat(json, "length")
         );
-        if (GsonHelper.getAsBoolean(json, "looping", false)) {
+        if (GsonHelper.getAsBoolean(json, "loop", false)) {
             builder.looping();
         }
         for (final JsonElement element : GsonHelper.getAsJsonArray(json, "animations")) {
