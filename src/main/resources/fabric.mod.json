@@ -20,7 +20,7 @@
     "json-entity-animations.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.0",
+    "fabricloader": "*",
     "minecraft": "1.19.2",
     "fabric-resource-loader-v0": "*"
   }
