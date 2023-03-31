@@ -34,7 +34,7 @@ public class JsonEntityAnimationClient implements ClientModInitializer {
             }
 
             @Override
-            public void reload(ResourceManager manager) {
+            public void onResourceManagerReload(ResourceManager manager) {
                 ANIMATIONS.clear();
                 for (final var entry : manager.listResources("animations", id -> id.getPath().endsWith(".json")).entrySet()) {
                     try (Reader reader = entry.getValue().openAsReader()) {

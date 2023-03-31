@@ -14,9 +14,6 @@
   "entrypoints": {
     "client": [
       "io.github.gaming32.jsonentityanimation.client.JsonEntityAnimationClient"
-    ],
-    "main": [
-      "io.github.gaming32.jsonentityanimation.JsonEntityAnimation"
     ]
   },
   "mixins": [
