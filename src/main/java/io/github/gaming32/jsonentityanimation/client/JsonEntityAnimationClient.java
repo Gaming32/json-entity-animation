@@ -52,6 +52,7 @@ public class JsonEntityAnimationClient implements ClientModInitializer {
                         LOGGER.error("Failed to load animation {}", entry.getKey(), e);
                     }
                 }
+                LOGGER.info("Loaded {} entity animations", ANIMATIONS.size());
             }
         });
     }
