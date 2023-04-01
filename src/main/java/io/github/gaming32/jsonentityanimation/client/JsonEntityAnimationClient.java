@@ -35,7 +35,16 @@ public class JsonEntityAnimationClient implements ClientModInitializer {
                 ANIMATIONS.clear();
                 for (final var entry : manager.listResources("animations", id -> id.getPath().endsWith(".json")).entrySet()) {
                     try (Reader reader = entry.getValue().openAsReader()) {
-                        ANIMATIONS.put(entry.getKey(), JsonEntityAnimation.parseAnimation(GsonHelper.parse(reader)));
+                        ANIMATIONS.put(
+                            new ResourceLocation(
+                                entry.getKey().getNamespace(),
+                                entry.getKey().getPath().substring(
+                                    "animations/".length(),
+                                    entry.getKey().getPath().length() - ".json".length()
+                                )
+                            ),
+                            JsonEntityAnimation.parseAnimation(GsonHelper.parse(reader))
+                        );
                     } catch (Exception e) {
                         LOGGER.error("Failed to load animation {}", entry.getKey(), e);
                     }
