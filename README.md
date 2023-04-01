@@ -6,7 +6,7 @@ Json Entity Animation (JsonEA) for short is a library mod for other mods to be a
 
 Add the mod as a dependency using the [Modrinth Maven](https://docs.modrinth.com/docs/tutorials/maven).
 
-```groovy
+```gradle
 dependencies {
     include modImplementation("maven.modrinth:json-entity-animation:0.1+1.19.2")
 }
