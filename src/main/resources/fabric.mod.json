@@ -3,7 +3,7 @@
   "id": "json-entity-animation",
   "version": "${version}",
   "name": "Json Entity Animation",
-  "description": "",
+  "description": "Library mod for creating your entity animations in JSON",
   "authors": [],
   "contact": {
     "repo": "https://github.com/Gaming32/json-entity-animation"
@@ -18,9 +18,15 @@
   "mixins": [
     "json-entity-animations.mixins.json"
   ],
+  "icon": "assets/json-entity-animation/icon.png",
   "depends": {
     "fabricloader": "*",
     "minecraft": "1.19.2",
     "fabric-resource-loader-v0": "*"
+  },
+  "custom": {
+    "modmenu": {
+      "badges": ["library"]
+    }
   }
 }
