@@ -7,16 +7,12 @@ import net.minecraft.client.animation.KeyframeAnimations;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.AnimationState;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.entity.EntityType;
 
 @Environment(EnvType.CLIENT)
-public final class JsonAnimator<T extends Entity> {
-    private final EntityType<T> entity;
-    private final HierarchicalModel<T> model;
+public final class JsonAnimator {
+    private final HierarchicalModel<?> model;
 
-    public JsonAnimator(EntityType<T> entity, HierarchicalModel<T> model) {
-        this.entity = entity;
+    public JsonAnimator(HierarchicalModel<?> model) {
         this.model = model;
     }
 
@@ -28,7 +24,7 @@ public final class JsonAnimator<T extends Entity> {
         state.updateTime(animationProgress, timeSpeed);
         state.ifStarted(state1 -> KeyframeAnimations.animate(
             model,
-            JsonEntityAnimation.getAnimationOrThrow(entity, animationId),
+            JsonEntityAnimation.getAnimationOrThrow(animationId),
             state1.getAccumulatedTime(),
             1f,
             HierarchicalModelAccessor.getAnimationVectorCache()

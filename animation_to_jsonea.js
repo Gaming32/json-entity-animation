@@ -17,22 +17,18 @@
                 description: "Export Animations to Json Entity Animation format",
                 icon: "fa-file-export",
                 condition: () => Format.animation_mode,
-                click: () => Blockbench.textPrompt(
-                    "Enter the ID of the entity you are animating.",
-                    ModelProject.all.find(p => p.selected)?.model_identifier ?? "",
-                    (entity) => {
-                        const animation = Animation.selected;
-                        if (animation == null) return;
-                        Blockbench.export({
-                            type: "Json Files",
-                            extensions: ["json"],
-                            name: `${animation.name.replaceAll(".", "_").replace("animation_", "")}.json`,
-                            resource_id: "jsonea",
-                            savetype: "text",
-                            content: JSON.stringify(generateJson(animation, entity))
-                        });
-                    }
-                )
+                click() {
+                    const animation = Animation.selected;
+                    if (animation == null) return;
+                    Blockbench.export({
+                        type: "Json Files",
+                        extensions: ["json"],
+                        name: `${animation.name.replaceAll(".", "_").replace("animation_", "")}.json`,
+                        resource_id: "jsonea",
+                        savetype: "text",
+                        content: JSON.stringify(generateJson(animation))
+                    });
+                }
             });
             MenuBar.addAction(menuButton, "file.export");
         },
@@ -42,9 +38,8 @@
     });
 })();
 
-function generateJson(animation, entity) {
+function generateJson(animation) {
     const result = {
-        entity,
         length: animation.length,
         animations: []
     };
