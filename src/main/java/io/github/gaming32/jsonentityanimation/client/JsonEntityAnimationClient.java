@@ -33,13 +33,13 @@ public class JsonEntityAnimationClient implements ClientModInitializer {
             @Override
             public void onResourceManagerReload(ResourceManager manager) {
                 ANIMATIONS.clear();
-                for (final var entry : manager.listResources("animations", id -> id.getPath().endsWith(".json")).entrySet()) {
+                for (final var entry : manager.listResources("jsonea", id -> id.getPath().endsWith(".json")).entrySet()) {
                     try (Reader reader = entry.getValue().openAsReader()) {
                         ANIMATIONS.put(
                             new ResourceLocation(
                                 entry.getKey().getNamespace(),
                                 entry.getKey().getPath().substring(
-                                    "animations/".length(),
+                                    "jsonea/".length(),
                                     entry.getKey().getPath().length() - ".json".length()
                                 )
                             ),

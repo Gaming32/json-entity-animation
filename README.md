@@ -1,6 +1,6 @@
 # Json Entity Animation
 
-Json Entity Animation (JsonEA) for short is a library mod for other mods to be able to define animations through JSON instead of through code. [A Blockbench plugin](animation_to_jsonea.js) is also provided in order to export your animations to this format. This works great in conjunction with [JsonEM](https://modrinth.com/mod/jsonem).
+Json Entity Animation (JsonEA) for short is a library mod for other mods to be able to define animations through JSON instead of through code. [A Blockbench plugin](animation_to_jsonea.js) is also provided in order to export your animations to this format.
 
 ## For developers
 
@@ -12,7 +12,7 @@ dependencies {
 }
 ```
 
-Once added, put your animation JSONs in the `assets/modid/animations` directory. To load the animations, your entity model must subclass `SinglePartEntityModel`/`HierarchicalModel`. Then define a `JsonAnimator` field and animation IDs.
+Once added, put your animation JSONs in the `assets/modid/jsonea` directory. To load the animations, your entity model must subclass `SinglePartEntityModel`/`HierarchicalModel`. Then define a `JsonAnimator` field and animation IDs.
 
 ```java
 public class MyEntityModel extends SinglePartEntityModel<MyEntity> {
