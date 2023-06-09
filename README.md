@@ -8,7 +8,7 @@ Add the mod as a dependency using the [Modrinth Maven](https://docs.modrinth.com
 
 ```gradle
 dependencies {
-    include modImplementation("maven.modrinth:json-entity-animation:0.1+1.19.2")
+    include(modImplementation("maven.modrinth:json-entity-animation:0.2+1.19.2"))
 }
 ```
 
