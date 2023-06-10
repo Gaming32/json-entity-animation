@@ -42,7 +42,7 @@ public class AnimationParser {
             builder.looping();
         }
         for (final JsonElement element : GsonHelper.getAsJsonArray(json, "animations")) {
-            final JsonObject object = GsonHelper.convertToJsonObject(element, "animations");
+            final JsonObject object = GsonHelper.convertToJsonObject(element, "animation");
             builder.addAnimation(GsonHelper.getAsString(object, "bone"), parseChannel(object));
         }
         return builder.build();
@@ -58,7 +58,7 @@ public class AnimationParser {
         final Keyframe[] keyframes = new Keyframe[keyframesJson.size()];
         for (int i = 0; i < keyframes.length; i++) {
             keyframes[i] = parseKeyframe(
-                GsonHelper.convertToJsonObject(keyframesJson.get(i), Integer.toString(i)),
+                GsonHelper.convertToJsonObject(keyframesJson.get(i), "keyframe"),
                 target.second()
             );
         }
@@ -80,9 +80,9 @@ public class AnimationParser {
 
     private static Vector3f parseVector(JsonArray array, KeyframeVecFactory vecFactory) {
         return vecFactory.apply(
-            GsonHelper.convertToFloat(array.get(0), "0"),
-            GsonHelper.convertToFloat(array.get(1), "1"),
-            GsonHelper.convertToFloat(array.get(2), "2")
+            GsonHelper.convertToFloat(array.get(0), "x"),
+            GsonHelper.convertToFloat(array.get(1), "y"),
+            GsonHelper.convertToFloat(array.get(2), "z")
         );
     }
 }
