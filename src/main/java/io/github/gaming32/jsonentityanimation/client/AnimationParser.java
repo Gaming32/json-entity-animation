@@ -3,7 +3,6 @@ package io.github.gaming32.jsonentityanimation.client;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.mojang.math.Vector3f;
 import it.unimi.dsi.fastutil.Pair;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -12,6 +11,7 @@ import net.minecraft.client.animation.AnimationDefinition;
 import net.minecraft.client.animation.Keyframe;
 import net.minecraft.client.animation.KeyframeAnimations;
 import net.minecraft.util.GsonHelper;
+import org.joml.Vector3f;
 
 import java.util.Map;
 

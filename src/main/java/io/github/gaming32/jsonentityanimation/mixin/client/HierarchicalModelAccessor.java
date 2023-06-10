@@ -1,7 +1,7 @@
 package io.github.gaming32.jsonentityanimation.mixin.client;
 
-import com.mojang.math.Vector3f;
 import net.minecraft.client.model.HierarchicalModel;
+import org.joml.Vector3f;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.gen.Accessor;
 
