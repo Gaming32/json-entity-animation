@@ -1,6 +1,6 @@
 # Json Entity Animation
 
-Json Entity Animation (JsonEA) for short is a library mod for other mods to be able to define animations through JSON instead of through code. [A Blockbench plugin](animation_to_jsonea.js) is also provided in order to export your animations to this format.
+Json Entity Animation (JsonEA) for short is a library mod for other mods to be able to define animations through JSON instead of through code. [A Blockbench plugin](animation_to_jsonea.js) (also available in the Blockbench plugins browser) is also provided in order to export your animations to this format.
 
 ## For developers
 
