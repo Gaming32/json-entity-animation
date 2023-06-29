@@ -3,7 +3,7 @@ plugins {
     id("io.github.juuxel.loom-quiltflower") version "1.8.0"
 }
 
-version = "0.2.2+1.20.1"
+version = "0.2.1+1.19.4"
 group = "io.github.gaming32"
 
 repositories {
